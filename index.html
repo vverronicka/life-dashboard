@@ -1,6 +1,41 @@
-<div class="top-bar-right">
-  <input type="file" id="importFileInput" accept="application/json" style="display:none" />
-  <button id="exportBtn" class="btn btn-ghost">⬇️ Экспорт</button>
-  <button id="importBtn" class="btn btn-ghost">⬆️ Импорт</button>
-  <button id="printBtn" class="btn btn-ghost">🖨 Печать</button>
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Мои сферы жизни</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <span class="app-title">Мои сферы жизни</span>
+      <button id="addSphereBtn" class="btn btn-ghost">+ Сфера</button>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-view="main">Главная</button>
+      <button class="tab-btn" data-view="archive">Архив</button>
+      <button class="tab-btn" data-view="trash">Корзина</button>
+      <button class="tab-btn" data-view="report">Отчёт за месяц</button>
+    </nav>
+
+    <div class="top-bar-right">
+      <input type="file" id="importFileInput" accept="application/json" style="display:none" />
+      <button id="exportBtn" class="btn btn-ghost">⬇️ Экспорт</button>
+      <button id="importBtn" class="btn btn-ghost">⬆️ Импорт</button>
+      <button id="printBtn" class="btn btn-ghost">🖨 Печать</button>
+    </div>
+  </header>
+
+  <main id="mainView" class="view active"></main>
+  <main id="archiveView" class="view"></main>
+  <main id="trashView" class="view"></main>
+  <main id="reportView" class="view"></main>
+
+  <footer class="footer">
+    <span>Данные сохраняются только в вашем браузере. Вы можете экспортировать/импортировать их вручную.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
